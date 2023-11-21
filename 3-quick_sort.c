@@ -39,6 +39,7 @@ int partition(int *array, int lower, int upper, size_t size)
 	temp = array[lower];
 	array[lower] = array[end];
 	array[end] = temp;
+	print_array(array, size);
 
 	return (end);
 }
