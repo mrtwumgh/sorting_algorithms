@@ -20,7 +20,7 @@ int partition(int *array, int lower, int upper, size_t size)
 
 	while (start < end)
 	{
-		if (array[start] <= pivot)
+		if (array[start] <= pivot && start < upper)
 		{
 			start++;
 		}
@@ -36,9 +36,8 @@ int partition(int *array, int lower, int upper, size_t size)
 			print_array(array, size);
 		}
 	}
-	temp = array[lower];
 	array[lower] = array[end];
-	array[end] = temp;
+	array[end] = pivot;
 	print_array(array, size);
 
 	return (end);
